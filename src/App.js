@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import RiskForm from './container/ RiskForm'
+import RiskForm from './container/RiskForm'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
