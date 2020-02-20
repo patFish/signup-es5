@@ -1,14 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import RiskForm from './container/ RiskForm';
+import React from 'react'
+import './App.css'
+import RiskForm from './container/ RiskForm'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-      <RiskForm />      
+      <div>Hello World</div>
+      <Router>
+        <Switch>
+        <Route
+            exact
+            path={'/'}
+            render={props => <RiskForm {...props} />}
+          />
+        </Switch>
+      </Router>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
