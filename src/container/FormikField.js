@@ -1,4 +1,3 @@
-//FormikField.js
 import React from 'react'
 import { Field, ErrorMessage } from 'formik'
 import TextField from '@material-ui/core/TextField'
