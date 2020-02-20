@@ -4,9 +4,9 @@ import React from 'react';
 
 const  Signup = () => {
   return (
-    <div>
-      
-    </div>
+    <React.Fragment>
+      <h1>Sign Up</h1>
+    </React.Fragment>
   );
 };
 

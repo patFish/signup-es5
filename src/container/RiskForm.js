@@ -1,12 +1,12 @@
 // Form.js
 
 import React from 'react';
+import Signup from './Signup';
 
 const  RiskForm = () => {
   return (
     <div>
-      <div>Hello Form</div>
-      
+      <Signup/>
     </div>
   );
 };
