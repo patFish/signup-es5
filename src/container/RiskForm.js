@@ -1,14 +1,14 @@
 // Form.js
 
-import React from 'react';
-import Signup from './Signup';
+import React from 'react'
+import Signup from './Signup'
 
-const  RiskForm = () => {
+const RiskForm = () => {
   return (
     <div>
-      <Signup/>
+      <Signup />
     </div>
-  );
-};
+  )
+}
 
-export default  RiskForm;
+export default RiskForm

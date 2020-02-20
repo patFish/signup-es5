@@ -9,11 +9,7 @@ function App() {
       <div>Hello World</div>
       <Router>
         <Switch>
-        <Route
-            exact
-            path={'/'}
-            render={props => <RiskForm {...props} />}
-          />
+          <Route exact path={'/'} render={props => <RiskForm {...props} />} />
         </Switch>
       </Router>
     </div>
