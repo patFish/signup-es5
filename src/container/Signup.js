@@ -3,6 +3,7 @@
 import React from 'react'
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
+import FormikField from './FormikField'
 
 const INITIALVALUES = {}
 const emailAddresses = ['test@gmail.com', 'test2@gmail.com', 'test3@gmail.com']
@@ -38,15 +39,19 @@ const Signup = () => {
   return (
     <React.Fragment>
       <h1>Sign Up</h1>
-      <Formik
-        initialValues={INITIALVALUES}
-        onSubmit={handleSubmit}
-        validationSchema={SIGNUPSCHEMA}
-      >
-        {({dirty, isValid})=> {
+      <Formik initialValues={INITIALVALUES} onSubmit={handleSubmit} validationSchema={SIGNUPSCHEMA}>
+        {({ dirty, isValid }) => {
           return (
             <Form>
-              
+              <FormikField name="name" label="Name" required />
+              <FormikField name="email" label="Email" required />
+              <FormikField name="password" label="Password" required type="password" />
+              <FormikField
+                name="passwordConfirm"
+                label="Confirm Password"
+                required
+                type="password"
+              />
             </Form>
           )
         }}
