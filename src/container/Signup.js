@@ -4,8 +4,29 @@ import React from 'react'
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 import FormikField from './FormikField'
+import FormikSelect from './FormikSelect'
+import { Button } from '@material-ui/core'
 
 const INITIALVALUES = {}
+const positionItems = [
+  {
+    label: 'Front End',
+    value: 'front_end',
+  },
+  {
+    label: 'Back End',
+    value: 'back_end',
+  },
+  {
+    label: 'Dev Ops',
+    value: 'dev_ops',
+  },
+  {
+    label: 'QA',
+    value: 'qa',
+  },
+]
+
 const emailAddresses = ['test@gmail.com', 'test2@gmail.com', 'test3@gmail.com']
 const lowercaseRegex = /(?=.*[a-z])/
 const uppercaseRegex = /(?=.*[A-Z])/
@@ -52,6 +73,15 @@ const Signup = () => {
                 required
                 type="password"
               />
+              <FormikSelect name="position" items={positionItems} label="Position" required />
+              <Button
+                variant="contained"
+                color="primary"
+                disabled={!dirty || !isValid}
+                type="submit"
+              >
+                Primary
+              </Button>
             </Form>
           )
         }}
